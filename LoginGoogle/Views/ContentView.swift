@@ -9,15 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     
-    //Vid 300 ,
+    //Paso 1.9 ,
     @EnvironmentObject var viewModel : AuthViewModel
     
     var body: some View {
         Group {
+            //paso 1.10
             if viewModel.loginState {
+                //en caso de true nos vamos
                 HomeView()
             }else {
-                //Vid 300 , en caso de false vamos a 
+                //en caso de false vamos a
                 LoginView()
             }
         }

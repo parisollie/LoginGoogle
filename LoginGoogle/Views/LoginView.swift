@@ -6,7 +6,8 @@
 //
 
 import SwiftUI
-//Vid 301,
+
+//V-301,paso 1.12
 struct LoginView: View {
     
     @EnvironmentObject var viewModel : AuthViewModel
@@ -15,7 +16,7 @@ struct LoginView: View {
         VStack(alignment: .center){
             Text("Login Google")
                 .fontWeight(.black)
-                .foregroundColor(.red)
+                .foregroundColor(.blue)
                 .font(.largeTitle)
             GoogleButton()
                 .onTapGesture {

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,7 +18,6 @@
 		9B24AB132C589A4B00E7E38B /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24AB122C589A4B00E7E38B /* AuthViewModel.swift */; };
 		9B24AB152C589ADC00E7E38B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24AB142C589ADC00E7E38B /* HomeView.swift */; };
 		9B24AB172C589B4300E7E38B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24AB162C589B4300E7E38B /* LoginView.swift */; };
-		9B24AB192C589F1000E7E38B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B24AB182C589F1000E7E38B /* GoogleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,12 +27,15 @@
 		9B24AAFB2C588CF700E7E38B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B24AAFE2C588CF700E7E38B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9B24AB0D2C58908F00E7E38B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9B24AB0F2C58911600E7E38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9B24AB0F2C58911600E7E38B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B24AB122C589A4B00E7E38B /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		9B24AB142C589ADC00E7E38B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9B24AB162C589B4300E7E38B /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		9B24AB182C589F1000E7E38B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		8AF872032D9DF06400B52B19 /* Model */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Model; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9B24AAF12C588CF500E7E38B /* Frameworks */ = {
@@ -68,12 +70,12 @@
 		9B24AAF62C588CF500E7E38B /* LoginGoogle */ = {
 			isa = PBXGroup;
 			children = (
-				9B24AB102C5899E600E7E38B /* ViewModel */,
-				9B24AB112C5899F800E7E38B /* Views */,
 				9B24AB0F2C58911600E7E38B /* Info.plist */,
 				9B24AB0D2C58908F00E7E38B /* GoogleService-Info.plist */,
+				8AF872032D9DF06400B52B19 /* Model */,
+				9B24AB102C5899E600E7E38B /* ViewModel */,
+				9B24AB112C5899F800E7E38B /* Views */,
 				9B24AAF72C588CF500E7E38B /* LoginGoogleApp.swift */,
-				9B24AAF92C588CF500E7E38B /* ContentView.swift */,
 				9B24AAFB2C588CF700E7E38B /* Assets.xcassets */,
 				9B24AAFD2C588CF700E7E38B /* Preview Content */,
 			);
@@ -101,7 +103,7 @@
 			children = (
 				9B24AB142C589ADC00E7E38B /* HomeView.swift */,
 				9B24AB162C589B4300E7E38B /* LoginView.swift */,
-				9B24AB182C589F1000E7E38B /* GoogleButton.swift */,
+				9B24AAF92C588CF500E7E38B /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -120,6 +122,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8AF872032D9DF06400B52B19 /* Model */,
 			);
 			name = LoginGoogle;
 			packageProductDependencies = (
@@ -190,7 +195,6 @@
 				9B24AB152C589ADC00E7E38B /* HomeView.swift in Sources */,
 				9B24AAF82C588CF500E7E38B /* LoginGoogleApp.swift in Sources */,
 				9B24AB172C589B4300E7E38B /* LoginView.swift in Sources */,
-				9B24AB192C589F1000E7E38B /* GoogleButton.swift in Sources */,
 				9B24AB132C589A4B00E7E38B /* AuthViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

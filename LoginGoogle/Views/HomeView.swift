@@ -9,10 +9,10 @@ import SwiftUI
 import GoogleSignIn
 
 struct HomeView: View {
-    // Vid 302, metodos de nuestra clase
+    // V-302,paso 1.13 traemos los métodos de nuestra clase
     @EnvironmentObject var viewModel: AuthViewModel
     
-    // Vid 302, traer los datos del usuario
+    // traer los datos del usuario nombre y correo
     let user = GIDSignIn.sharedInstance.currentUser
     
     var body: some View {
@@ -20,19 +20,19 @@ struct HomeView: View {
             VStack {
                 if let profile = user?.profile {
                     VStack(spacing: 16) {
-                        // Vid 302, traemos la imagen del usuario con diseño mejorado
+                        // traemos la imagen del usuario
                         AsyncImage(url: profile.imageURL(withDimension: 200)) { image in
                             image
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 120, height: 120)
-                                .clipShape(Circle()) // Hace la imagen redonda
+                                .clipShape(Circle())
                                 .shadow(radius: 5)
                         } placeholder: {
                             ProgressView()
                         }
 
-                        // Vid 302, mostrar nombre y correo con mejor diseño
+                        // mostrar nombre y correo
                         Text(profile.name)
                             .font(.title2)
                             .fontWeight(.bold)
@@ -43,7 +43,7 @@ struct HomeView: View {
                     }
                     .padding(.top, 20)
                 } else {
-                    // Vid 302, mensaje en caso de error al cargar el usuario
+                    // mensaje en caso de error al cargar el usuario
                     Text("No se pudo cargar la información del usuario")
                         .foregroundColor(.red)
                         .padding()
@@ -51,7 +51,7 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                // Vid 302, botón de cerrar sesión con diseño mejorado
+                // botón de cerrar sesión
                 Button(action: {
                     viewModel.signOut()
                 }) {
@@ -66,7 +66,8 @@ struct HomeView: View {
                 .padding(.horizontal, 40)
                 .padding(.bottom, 30)
             }
-            .navigationTitle("Perfil") // Vid 302, titulo de la vista
+            // titulo de la vista
+            .navigationTitle("Perfil")
             .padding()
         }
     }

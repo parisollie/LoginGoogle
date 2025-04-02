@@ -7,9 +7,10 @@
 
 import SwiftUI
 import GoogleSignIn
-//Vid 300
+
+//Paso 1.11, creamos el botón
 struct GoogleButton: UIViewRepresentable {
-    //Vid 300, para elegir el modo oscuro 
+    //para elegir el modo oscuro
     @Environment(\.colorScheme) var colorScheme
     
     private var button = GIDSignInButton()
